@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Thucpham {
-	int ma;
-	String ten;
-	float gia;
+	int maHang;
+	String tenSanpham;
+	float giaTri;
 	Date ngayNhapKho;
 
 	Thucpham next;
@@ -16,9 +16,9 @@ public class Thucpham {
 	}
 
 	Thucpham(int _id, String _ten, float _gia, Date _ngayNhapKho) {
-		ma = _id;
-		ten = _ten;
-		gia = _gia;
+		maHang = _id;
+		tenSanpham = _ten;
+		giaTri = _gia;
 		ngayNhapKho = _ngayNhapKho;
 	}
 
@@ -26,21 +26,22 @@ public class Thucpham {
 
 		scanner.nextLine();
 		System.out.print("Nhap ten san pham: ");
-		ten = scanner.nextLine();
+		tenSanpham = scanner.nextLine();
 
-		System.out.print("Hay nhap gia san pham: ");
-		gia = scanner.nextFloat();
+		System.out.print("Hay nhap gia tri san pham: ");
+		giaTri = scanner.nextFloat();
 
 		ngayNhapKho = new Date();
 	}
 
 	public void inTT() {
 		System.out.println(
-				"Ten : " + ten + ", Loai : Thuc Pham, Id: " + ma + ", Gia: " + gia + ", Ngay nhap: " + ngayNhapKho);
+				"Ten : " + tenSanpham + ", Loai : Thuc pham, Id: " + maHang + ", Gia: " + giaTri + ", Ngay nhap: "
+						+ ngayNhapKho);
 	}
 
 	public String GetName() {
-		System.out.println(ten);
-		return ten;
+		System.out.println(tenSanpham);
+		return tenSanpham;
 	}
 }
