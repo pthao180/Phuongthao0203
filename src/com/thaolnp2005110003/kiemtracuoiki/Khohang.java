@@ -57,7 +57,6 @@ public class Khohang {
         System.out.print("Ngay nhap: ");
         try {
             ngayNhapKho = simpleDateFormat.parse(scanner.nextLine());
-
         } catch (Exception e) {
         }
     }
